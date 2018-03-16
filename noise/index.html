@@ -14,17 +14,16 @@
           zoom: 2
         };
         earth = new WE.map('earth_div', options);
-        var natural = WE.tileLayer('http://data.webglearth.com/natural-earth-color/{z}/{x}/{y}.jpg', {
-          tileSize: 256,
-          tms: true
+        var satellite = WE.tileLayer('https://maps.tilehosting.com/c/klokantech/styles/satellite-aerial-hybrid/{z}/{x}/{y}.jpg?key=2rAee65H2Kxb4K8dcZTl', {
+          tileSize: 256
         });
-        natural.addTo(earth);
+        satellite.addTo(earth);
 
-        var toner = WE.tileLayer('http://tile.stamen.com/toner/{z}/{x}/{y}.png', {
-          attribution: 'Map tiles by Stamen Design, under CC BY 3.0. Data by OpenStreetMap, under CC BY SA.',
+        var noise = WE.tileLayer('https://maps.tilehosting.com/c/klokantech/styles/noise-pollution-only/{z}/{x}/{y}@2x.png?key=2rAee65H2Kxb4K8dcZTl', {
+          attribution: 'Data by OpenStreetMap.',
           opacity: 0.6
         });
-        toner.addTo(earth);
+        noise.addTo(earth);
       }
     </script>
     <style>
