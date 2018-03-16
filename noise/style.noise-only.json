@@ -1,0 +1,617 @@
+{
+  "name": "OctoGeo Noise Only",
+  "pitch": 0,
+  "sources": {
+    "noise": {
+      "type": "vector",
+      "url": "https://maps.tilehosting.com/c/klokantech/data/noise-pollution.json?key=2rAee65H2Kxb4K8dcZTl"
+    }
+  },
+  "version": 8,
+  "zoom": 2,
+  "id": "noise",
+  "glyphs": "https://maps.tilehosting.com/fonts/{fontstack}/{range}.pbf.pict?key=2rAee65H2Kxb4K8dcZTl",
+  "layers": [
+    {
+      "minzoom": 10,
+      "layout": {
+        "visibility": "visible"
+      },
+      "metadata": {
+        "mapbox:group": "1459193066085.223"
+      },
+      "filter": [
+        "==",
+        "noise_level",
+        3
+      ],
+      "type": "fill",
+      "source": "noise",
+      "id": "noise-industrial-3",
+      "paint": {
+        "fill-color": "hsla(43, 85%, 60%, 0.9)",
+        "fill-antialias": true,
+        "fill-opacity": 1,
+        "fill-outline-color": "#efbf43"
+      },
+      "source-layer": "noise_industrial"
+    },
+    {
+      "minzoom": 10,
+      "layout": {
+        "visibility": "visible"
+      },
+      "metadata": {
+        "mapbox:group": "1459193066085.223"
+      },
+      "filter": [
+        "==",
+        "noise_level",
+        3
+      ],
+      "type": "fill",
+      "source": "noise",
+      "id": "noise-leisure-3",
+      "paint": {
+        "fill-color": "hsla(43, 85%, 60%, 0.9)",
+        "fill-outline-color": "#efbf43",
+        "fill-opacity": 1,
+        "fill-antialias": true
+      },
+      "source-layer": "noise_leisure"
+    },
+    {
+      "minzoom": 10,
+      "layout": {
+        "visibility": "visible"
+      },
+      "metadata": {
+        "mapbox:group": "1459193066085.223"
+      },
+      "filter": [
+        "==",
+        "noise_level",
+        3
+      ],
+      "type": "fill",
+      "source": "noise",
+      "id": "noise-nightlife-3",
+      "paint": {
+        "fill-color": "hsla(43, 85%, 60%, 0.9)",
+        "fill-antialias": true,
+        "fill-opacity": 1,
+        "fill-outline-color": "#efbf43"
+      },
+      "source-layer": "noise_nightlife"
+    },
+    {
+      "minzoom": 10,
+      "layout": {
+        "visibility": "visible"
+      },
+      "metadata": {
+        "mapbox:group": "1459193066085.223"
+      },
+      "filter": [
+        "all",
+        [
+          "in",
+          "$type",
+          "Point",
+          "LineString",
+          "Polygon"
+        ],
+        [
+          "==",
+          "noise_level",
+          3
+        ]
+      ],
+      "type": "fill",
+      "source": "noise",
+      "id": "noise-retail-3",
+      "paint": {
+        "fill-color": "hsla(43, 85%, 60%, 0.9)",
+        "fill-antialias": true,
+        "fill-opacity": 1,
+        "fill-outline-color": "#efbf43"
+      },
+      "source-layer": "noise_retail"
+    },
+    {
+      "minzoom": 10,
+      "layout": {
+        "visibility": "visible"
+      },
+      "metadata": {
+        "mapbox:group": "1459193066085.223"
+      },
+      "filter": [
+        "==",
+        "noise_level",
+        3
+      ],
+      "type": "fill",
+      "source": "noise",
+      "id": "noise-road-3",
+      "paint": {
+        "fill-color": "hsla(43, 85%, 60%, 0.9)",
+        "fill-antialias": true,
+        "fill-opacity": 1,
+        "fill-outline-color": "#efbf43"
+      },
+      "source-layer": "noise_road"
+    },
+    {
+      "minzoom": 10,
+      "layout": {
+        "visibility": "visible"
+      },
+      "metadata": {
+        "mapbox:group": "1459193066085.223"
+      },
+      "filter": [
+        "==",
+        "noise_level",
+        3
+      ],
+      "type": "fill",
+      "source": "noise",
+      "id": "noise-shop-level-3",
+      "paint": {
+        "fill-color": "hsla(43, 85%, 60%, 0.9)",
+        "fill-antialias": true,
+        "fill-opacity": 1,
+        "fill-outline-color": "#efbf43"
+      },
+      "source-layer": "noise_shop"
+    },
+    {
+      "minzoom": 10,
+      "layout": {
+        "visibility": "visible"
+      },
+      "metadata": {
+        "mapbox:group": "1459193066085.223"
+      },
+      "filter": [
+        "==",
+        "noise_level",
+        3
+      ],
+      "type": "fill",
+      "source": "noise",
+      "id": "noise-sport-3",
+      "paint": {
+        "fill-color": "hsla(43, 85%, 60%, 0.9)",
+        "fill-antialias": true,
+        "fill-opacity": 1,
+        "fill-outline-color": "#efbf43"
+      },
+      "source-layer": "noise_sport"
+    },
+    {
+      "layout": {
+        "visibility": "visible"
+      },
+      "metadata": {
+        "mapbox:group": "1459193066085.223"
+      },
+      "filter": [
+        "==",
+        "noise_level",
+        3
+      ],
+      "type": "fill",
+      "source": "noise",
+      "id": "noise-rail-3",
+      "paint": {
+        "fill-color": "hsla(43, 85%, 60%, 0.9)",
+        "fill-opacity": 1,
+        "fill-antialias": true,
+        "fill-outline-color": "#efbf43"
+      },
+      "source-layer": "noise_rail"
+    },
+    {
+      "layout": {
+        "visibility": "visible"
+      },
+      "metadata": {
+        "mapbox:group": "1459193066085.223"
+      },
+      "filter": [
+        "==",
+        "noise_level",
+        2
+      ],
+      "type": "fill",
+      "source": "noise",
+      "id": "noise-rail-2",
+      "paint": {
+        "fill-opacity": 1,
+        "fill-color": "hsla(25, 72%, 51%, 0.7)",
+        "fill-antialias": false
+      },
+      "source-layer": "noise_rail"
+    },
+    {
+      "minzoom": 10,
+      "layout": {
+        "visibility": "visible"
+      },
+      "metadata": {
+        "mapbox:group": "1459193066085.223"
+      },
+      "filter": [
+        "==",
+        "noise_level",
+        2
+      ],
+      "type": "fill",
+      "source": "noise",
+      "id": "noise-industrial-2",
+      "paint": {
+        "fill-color": "hsla(25, 72%, 51%, 0.7)",
+        "fill-antialias": false,
+        "fill-opacity": 1,
+        "fill-outline-color": "hsla(7, 63%, 54%, 0.9)"
+      },
+      "source-layer": "noise_industrial"
+    },
+    {
+      "minzoom": 10,
+      "layout": {
+        "visibility": "visible"
+      },
+      "metadata": {
+        "mapbox:group": "1459193066085.223"
+      },
+      "filter": [
+        "all",
+        [
+          "in",
+          "$type",
+          "Point",
+          "LineString",
+          "Polygon"
+        ],
+        [
+          "==",
+          "noise_level",
+          2
+        ]
+      ],
+      "type": "fill",
+      "source": "noise",
+      "id": "noise-retail-2",
+      "paint": {
+        "fill-color": "hsla(25, 72%, 51%, 0.7)",
+        "fill-antialias": false,
+        "fill-opacity": 1,
+        "fill-outline-color": "hsla(7, 63%, 54%, 0.9)"
+      },
+      "source-layer": "noise_retail"
+    },
+    {
+      "minzoom": 10,
+      "layout": {
+        "visibility": "visible"
+      },
+      "metadata": {
+        "mapbox:group": "1459193066085.223"
+      },
+      "filter": [
+        "==",
+        "noise_level",
+        2
+      ],
+      "type": "fill",
+      "source": "noise",
+      "id": "noise-shop-level-2",
+      "paint": {
+        "fill-color": "hsla(25, 72%, 51%, 0.7)",
+        "fill-antialias": false,
+        "fill-opacity": 1,
+        "fill-outline-color": "hsla(7, 63%, 54%, 0.9)"
+      },
+      "source-layer": "noise_shop"
+    },
+    {
+      "minzoom": 10,
+      "layout": {
+        "visibility": "visible"
+      },
+      "metadata": {
+        "mapbox:group": "1459193066085.223"
+      },
+      "filter": [
+        "==",
+        "noise_level",
+        2
+      ],
+      "type": "fill",
+      "source": "noise",
+      "id": "noise-road-2",
+      "paint": {
+        "fill-color": "hsla(25, 72%, 51%, 0.7)",
+        "fill-antialias": false,
+        "fill-opacity": 1,
+        "fill-outline-color": "hsla(7, 63%, 54%, 0.9)"
+      },
+      "source-layer": "noise_road"
+    },
+    {
+      "minzoom": 10,
+      "layout": {
+        "visibility": "visible"
+      },
+      "metadata": {
+        "mapbox:group": "1459193066085.223"
+      },
+      "filter": [
+        "==",
+        "noise_level",
+        2
+      ],
+      "type": "fill",
+      "source": "noise",
+      "id": "noise-leisure-2",
+      "paint": {
+        "fill-color": "hsla(25, 72%, 51%, 0.7)",
+        "fill-outline-color": "hsla(7, 63%, 54%, 0.9)",
+        "fill-antialias": false,
+        "fill-opacity": 1
+      },
+      "source-layer": "noise_leisure"
+    },
+    {
+      "minzoom": 10,
+      "layout": {
+        "visibility": "visible"
+      },
+      "metadata": {
+        "mapbox:group": "1459193066085.223"
+      },
+      "filter": [
+        "==",
+        "noise_level",
+        2
+      ],
+      "type": "fill",
+      "source": "noise",
+      "id": "noise-sport-2",
+      "paint": {
+        "fill-color": "hsla(25, 72%, 51%, 0.7)",
+        "fill-antialias": false,
+        "fill-opacity": 1,
+        "fill-outline-color": "hsla(7, 63%, 54%, 0.9)"
+      },
+      "source-layer": "noise_sport"
+    },
+    {
+      "minzoom": 10,
+      "layout": {
+        "visibility": "visible"
+      },
+      "metadata": {
+        "mapbox:group": "1459193066085.223"
+      },
+      "filter": [
+        "==",
+        "noise_level",
+        2
+      ],
+      "type": "fill",
+      "source": "noise",
+      "id": "noise-nightlife-2",
+      "paint": {
+        "fill-color": "hsla(7, 63%, 54%, 0.9)",
+        "fill-antialias": false,
+        "fill-opacity": 1,
+        "fill-outline-color": "hsla(7, 63%, 54%, 0.9)"
+      },
+      "source-layer": "noise_nightlife"
+    },
+    {
+      "minzoom": 10,
+      "layout": {
+        "visibility": "visible"
+      },
+      "metadata": {
+        "mapbox:group": "1459193066085.223"
+      },
+      "filter": [
+        "==",
+        "noise_level",
+        1
+      ],
+      "type": "fill",
+      "source": "noise",
+      "id": "noise-industrial-1",
+      "paint": {
+        "fill-color": "hsla(7, 63%, 54%, 0.9)",
+        "fill-antialias": false,
+        "fill-opacity": 1,
+        "fill-outline-color": "hsla(7, 63%, 54%, 0.9)"
+      },
+      "source-layer": "noise_industrial"
+    },
+    {
+      "minzoom": 10,
+      "layout": {
+        "visibility": "visible"
+      },
+      "metadata": {
+        "mapbox:group": "1459193066085.223"
+      },
+      "filter": [
+        "==",
+        "noise_level",
+        1
+      ],
+      "type": "fill",
+      "source": "noise",
+      "id": "noise-sport-1",
+      "paint": {
+        "fill-color": "hsla(7, 63%, 54%, 0.9)",
+        "fill-antialias": false,
+        "fill-opacity": 1,
+        "fill-outline-color": "hsla(7, 63%, 54%, 0.9)"
+      },
+      "source-layer": "noise_sport"
+    },
+    {
+      "minzoom": 10,
+      "layout": {
+        "visibility": "visible"
+      },
+      "metadata": {
+        "mapbox:group": "1459193066085.223"
+      },
+      "filter": [
+        "all",
+        [
+          "in",
+          "$type",
+          "Point",
+          "LineString",
+          "Polygon"
+        ],
+        [
+          "==",
+          "noise_level",
+          1
+        ]
+      ],
+      "type": "fill",
+      "source": "noise",
+      "id": "noise-retail-1",
+      "paint": {
+        "fill-color": "hsla(7, 63%, 54%, 0.9)",
+        "fill-antialias": false,
+        "fill-opacity": 1,
+        "fill-outline-color": "hsla(7, 63%, 54%, 0.9)"
+      },
+      "source-layer": "noise_retail"
+    },
+    {
+      "layout": {
+        "visibility": "visible"
+      },
+      "metadata": {
+        "mapbox:group": "1459193066085.223"
+      },
+      "filter": [
+        "==",
+        "noise_level",
+        1
+      ],
+      "type": "fill",
+      "source": "noise",
+      "id": "noise-rail-1",
+      "paint": {
+        "fill-color": "hsla(7, 63%, 54%, 0.9)",
+        "fill-opacity": 1,
+        "fill-antialias": false
+      },
+      "source-layer": "noise_rail"
+    },
+    {
+      "minzoom": 10,
+      "layout": {
+        "visibility": "visible"
+      },
+      "metadata": {
+        "mapbox:group": "1459193066085.223"
+      },
+      "filter": [
+        "==",
+        "noise_level",
+        1
+      ],
+      "type": "fill",
+      "source": "noise",
+      "id": "noise-shop-level-1",
+      "paint": {
+        "fill-color": "hsla(7, 63%, 54%, 0.9)",
+        "fill-antialias": false,
+        "fill-opacity": 1,
+        "fill-outline-color": "hsla(7, 63%, 54%, 0.9)"
+      },
+      "source-layer": "noise_shop"
+    },
+    {
+      "minzoom": 10,
+      "layout": {
+        "visibility": "visible"
+      },
+      "metadata": {
+        "mapbox:group": "1459193066085.223"
+      },
+      "filter": [
+        "==",
+        "noise_level",
+        1
+      ],
+      "type": "fill",
+      "source": "noise",
+      "id": "noise-road-1",
+      "paint": {
+        "fill-color": "hsla(7, 63%, 54%, 0.9)",
+        "fill-antialias": false,
+        "fill-opacity": 1,
+        "fill-outline-color": "hsla(7, 63%, 54%, 0.9)"
+      },
+      "source-layer": "noise_road"
+    },
+    {
+      "minzoom": 10,
+      "layout": {
+        "visibility": "visible"
+      },
+      "metadata": {
+        "mapbox:group": "1459193066085.223"
+      },
+      "filter": [
+        "==",
+        "noise_level",
+        1
+      ],
+      "type": "fill",
+      "source": "noise",
+      "id": "noise-leisure-1",
+      "paint": {
+        "fill-color": "hsla(7, 63%, 54%, 0.9)",
+        "fill-outline-color": "hsla(7, 63%, 54%, 0.9)",
+        "fill-antialias": false,
+        "fill-opacity": 1
+      },
+      "source-layer": "noise_leisure"
+    },
+    {
+      "minzoom": 10,
+      "layout": {
+        "visibility": "visible"
+      },
+      "metadata": {
+        "mapbox:group": "1459193066085.223"
+      },
+      "filter": [
+        "==",
+        "noise_level",
+        1
+      ],
+      "type": "fill",
+      "source": "noise",
+      "id": "noise-nightlife-1",
+      "paint": {
+        "fill-color": "hsla(7, 63%, 54%, 0.9)",
+        "fill-antialias": false,
+        "fill-opacity": 1,
+        "fill-outline-color": "hsla(7, 63%, 54%, 0.9)"
+      },
+      "source-layer": "noise_nightlife"
+    }
+  ]
+}
