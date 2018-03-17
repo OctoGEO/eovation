@@ -83,6 +83,27 @@
                }
             });
 
+            var zoom = map.getZoom();
+            if(id === "noise") {
+                if(zoom < 10) {
+                    map.flyTo({
+                        zoom: 10.2
+                    });
+                }
+            } else if (id === "light") {
+                if(zoom > 7) {
+                    map.flyTo({
+                        zoom: 7
+                    });
+                }
+            } else if (id === "green") {
+                if(zoom > 9) {
+                    map.flyTo({
+                        zoom: 9
+                    });
+                }
+            }
+
 
         }
 
