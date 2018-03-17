@@ -43,12 +43,13 @@
         #links > div { display: none; }
         #links > div.active { display: block }
         #links > div.active span { padding: 2vh; background-color: rgba(255,255,255,0.8); font-size: 3vh;}
+        #slides { font-size: 2vh; margin-left: 2em; }
     </style>
 </head>
 <body>
     <div id='header'>
         <img src="octogeo.png" />
-        <span>OctoGEO.com</span>
+        <span>OctoGEO.com: Noise, light and green around you</span> <a id="slides" target="_blank" href="https://docs.google.com/presentation/d/1TMmwt0Gyw69AHefBLnH2L3N3l55sPzKV0-8Iqf0MsyY/edit">slides</a>
     </div>
     <div id='map'></div>
     <div id='buttons'>
@@ -77,9 +78,9 @@
     <script>
         var map = new mapboxgl.Map({
             container: 'map',
-            style: '/eovation/noise/style.satellite.json',
-            center: [14.412229, 50.086874],
-            zoom: 15,
+            style: '/eovation/satellite/style.satellite.json',
+            center: [14.4135589, 50.0861614],
+            zoom: 19,
             hash: true
         });
 
@@ -91,7 +92,7 @@
             }
             var id = evt.target.id;
             var styles = {
-                satellite: '/eovation/noise/style.satellite.json',
+                satellite: '/eovation/satellite/style.satellite.json',
                 noise: '/eovation/noise/style.satellite.json',
                 green: '/eovation/landcover/style.all-satellite.json',
                 light: '/eovation/light/style.all-satellite.json'
