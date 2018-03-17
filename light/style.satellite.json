@@ -1143,7 +1143,7 @@
     "light2016": {
       "tileSize": 256,
       "type": "raster",
-      "url": "http://159.122.92.89:8083/BlackMarble2016.json"
+      "url": "https://tiles.octogeo.com/BlackMarble2016.json"
     }
   },
   "version": 8,

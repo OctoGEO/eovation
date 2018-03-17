@@ -1132,7 +1132,7 @@
     "landcover1992": {
       "tileSize": 256,
       "type": "raster",
-      "url": "http://159.122.92.89:8082/ESACCI-LC-L4-LCCS-Map-300m-P1Y-1992-v2.0.7.tif.vrt.json"
+      "url": "https://tiles.octogeo.com/ESACCI-LC-L4-LCCS-Map-300m-P1Y-1992-v2.0.7.tif.vrt.json"
     }
   },
   "version": 8,
