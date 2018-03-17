@@ -1138,7 +1138,7 @@
     "satellite": {
       "tileSize": 256,
       "type": "raster",
-      "url": "https://maps.tilehosting.com/data/satellite.json?key=2rAee65H2Kxb4K8dcZTl"
+      "url": "https://maps.tilehosting.com/c/klokantech/styles/satellite-aerial.json?key=2rAee65H2Kxb4K8dcZTl"
     },
     "light2016": {
       "tileSize": 256,
