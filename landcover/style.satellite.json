@@ -56,6 +56,22 @@
     },
     {
       "filter": [
+        "all"
+      ],
+      "id": "landcover1992",
+      "layout": {
+        "visibility": "visible"
+      },
+      "maxzoom": 22,
+      "minzoom": 0,
+      "paint": {
+        "raster-opacity": 0.8
+      },
+      "source": "landcover1992",
+      "type": "raster"
+    },
+    {
+      "filter": [
         "==",
         "$type",
         "Polygon"
@@ -1113,9 +1129,10 @@
       "type": "raster",
       "url": "https://maps.tilehosting.com/data/satellite.json?key=2rAee65H2Kxb4K8dcZTl"
     },
-    "noise": {
-      "type": "vector",
-      "url": "https://maps.tilehosting.com/c/klokantech/data/noise-pollution.json?key=2rAee65H2Kxb4K8dcZTl"
+    "landcover1992": {
+      "tileSize": 256,
+      "type": "raster",
+      "url": "http://159.122.92.89:8082/ESACCI-LC-L4-LCCS-Map-300m-P1Y-1992-v2.0.7.tif.vrt.json"
     }
   },
   "version": 8,
