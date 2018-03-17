@@ -1148,12 +1148,12 @@
     "light2012": {
       "tileSize": 256,
       "type": "raster",
-      "url": "http://159.122.92.89:8083/BlackMarble2012.json"
+      "url": "https://159.122.92.89:8083/BlackMarble2012.json"
     },
     "light2016": {
       "tileSize": 256,
       "type": "raster",
-      "url": "http://159.122.92.89:8083/BlackMarble2016.json"
+      "url": "https://159.122.92.89:8083/BlackMarble2016.json"
     }
   },
   "version": 8,

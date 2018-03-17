@@ -1500,122 +1500,122 @@
     "landcover1992": {
       "tileSize": 256,
       "type": "raster",
-      "url": "http://159.122.92.89:8082/ESACCI-LC-L4-LCCS-Map-300m-P1Y-1992-v2.0.7.tif.vrt.json"
+      "url": "https://159.122.92.89:8082/ESACCI-LC-L4-LCCS-Map-300m-P1Y-1992-v2.0.7.tif.vrt.json"
     },
     "landcover1993": {
       "tileSize": 256,
       "type": "raster",
-      "url": "http://159.122.92.89:8082/ESACCI-LC-L4-LCCS-Map-300m-P1Y-1993-v2.0.7.tif.vrt.json"
+      "url": "https://159.122.92.89:8082/ESACCI-LC-L4-LCCS-Map-300m-P1Y-1993-v2.0.7.tif.vrt.json"
     },
     "landcover1994": {
       "tileSize": 256,
       "type": "raster",
-      "url": "http://159.122.92.89:8082/ESACCI-LC-L4-LCCS-Map-300m-P1Y-1994-v2.0.7.tif.vrt.json"
+      "url": "https://159.122.92.89:8082/ESACCI-LC-L4-LCCS-Map-300m-P1Y-1994-v2.0.7.tif.vrt.json"
     },
     "landcover1995": {
       "tileSize": 256,
       "type": "raster",
-      "url": "http://159.122.92.89:8082/ESACCI-LC-L4-LCCS-Map-300m-P1Y-1995-v2.0.7.tif.vrt.json"
+      "url": "https://159.122.92.89:8082/ESACCI-LC-L4-LCCS-Map-300m-P1Y-1995-v2.0.7.tif.vrt.json"
     },
     "landcover1996": {
       "tileSize": 256,
       "type": "raster",
-      "url": "http://159.122.92.89:8082/ESACCI-LC-L4-LCCS-Map-300m-P1Y-1996-v2.0.7.tif.vrt.json"
+      "url": "https://159.122.92.89:8082/ESACCI-LC-L4-LCCS-Map-300m-P1Y-1996-v2.0.7.tif.vrt.json"
     },
     "landcover1997": {
       "tileSize": 256,
       "type": "raster",
-      "url": "http://159.122.92.89:8082/ESACCI-LC-L4-LCCS-Map-300m-P1Y-1997-v2.0.7.tif.vrt.json"
+      "url": "https://159.122.92.89:8082/ESACCI-LC-L4-LCCS-Map-300m-P1Y-1997-v2.0.7.tif.vrt.json"
     },
     "landcover1998": {
       "tileSize": 256,
       "type": "raster",
-      "url": "http://159.122.92.89:8082/ESACCI-LC-L4-LCCS-Map-300m-P1Y-1998-v2.0.7.tif.vrt.json"
+      "url": "https://159.122.92.89:8082/ESACCI-LC-L4-LCCS-Map-300m-P1Y-1998-v2.0.7.tif.vrt.json"
     },
     "landcover1999": {
       "tileSize": 256,
       "type": "raster",
-      "url": "http://159.122.92.89:8082/ESACCI-LC-L4-LCCS-Map-300m-P1Y-1999-v2.0.7.tif.vrt.json"
+      "url": "https://159.122.92.89:8082/ESACCI-LC-L4-LCCS-Map-300m-P1Y-1999-v2.0.7.tif.vrt.json"
     },
     "landcover2000": {
       "tileSize": 256,
       "type": "raster",
-      "url": "http://159.122.92.89:8082/ESACCI-LC-L4-LCCS-Map-300m-P1Y-2000-v2.0.7.tif.vrt.json"
+      "url": "https://159.122.92.89:8082/ESACCI-LC-L4-LCCS-Map-300m-P1Y-2000-v2.0.7.tif.vrt.json"
     },
     "landcover2001": {
       "tileSize": 256,
       "type": "raster",
-      "url": "http://159.122.92.89:8082/ESACCI-LC-L4-LCCS-Map-300m-P1Y-2001-v2.0.7.tif.vrt.json"
+      "url": "https://159.122.92.89:8082/ESACCI-LC-L4-LCCS-Map-300m-P1Y-2001-v2.0.7.tif.vrt.json"
     },
     "landcover2002": {
       "tileSize": 256,
       "type": "raster",
-      "url": "http://159.122.92.89:8082/ESACCI-LC-L4-LCCS-Map-300m-P1Y-2002-v2.0.7.tif.vrt.json"
+      "url": "https://159.122.92.89:8082/ESACCI-LC-L4-LCCS-Map-300m-P1Y-2002-v2.0.7.tif.vrt.json"
     },
     "landcover2003": {
       "tileSize": 256,
       "type": "raster",
-      "url": "http://159.122.92.89:8082/ESACCI-LC-L4-LCCS-Map-300m-P1Y-2003-v2.0.7.tif.vrt.json"
+      "url": "https://159.122.92.89:8082/ESACCI-LC-L4-LCCS-Map-300m-P1Y-2003-v2.0.7.tif.vrt.json"
     },
     "landcover2004": {
       "tileSize": 256,
       "type": "raster",
-      "url": "http://159.122.92.89:8082/ESACCI-LC-L4-LCCS-Map-300m-P1Y-2004-v2.0.7.tif.vrt.json"
+      "url": "https://159.122.92.89:8082/ESACCI-LC-L4-LCCS-Map-300m-P1Y-2004-v2.0.7.tif.vrt.json"
     },
     "landcover2005": {
       "tileSize": 256,
       "type": "raster",
-      "url": "http://159.122.92.89:8082/ESACCI-LC-L4-LCCS-Map-300m-P1Y-2005-v2.0.7.tif.vrt.json"
+      "url": "https://159.122.92.89:8082/ESACCI-LC-L4-LCCS-Map-300m-P1Y-2005-v2.0.7.tif.vrt.json"
     },
     "landcover2006": {
       "tileSize": 256,
       "type": "raster",
-      "url": "http://159.122.92.89:8082/ESACCI-LC-L4-LCCS-Map-300m-P1Y-2006-v2.0.7.tif.vrt.json"
+      "url": "https://159.122.92.89:8082/ESACCI-LC-L4-LCCS-Map-300m-P1Y-2006-v2.0.7.tif.vrt.json"
     },
     "landcover2007": {
       "tileSize": 256,
       "type": "raster",
-      "url": "http://159.122.92.89:8082/ESACCI-LC-L4-LCCS-Map-300m-P1Y-2007-v2.0.7.tif.vrt.json"
+      "url": "https://159.122.92.89:8082/ESACCI-LC-L4-LCCS-Map-300m-P1Y-2007-v2.0.7.tif.vrt.json"
     },
     "landcover2008": {
       "tileSize": 256,
       "type": "raster",
-      "url": "http://159.122.92.89:8082/ESACCI-LC-L4-LCCS-Map-300m-P1Y-2008-v2.0.7.tif.vrt.json"
+      "url": "https://159.122.92.89:8082/ESACCI-LC-L4-LCCS-Map-300m-P1Y-2008-v2.0.7.tif.vrt.json"
     },
     "landcover2009": {
       "tileSize": 256,
       "type": "raster",
-      "url": "http://159.122.92.89:8082/ESACCI-LC-L4-LCCS-Map-300m-P1Y-2009-v2.0.7.tif.vrt.json"
+      "url": "https://159.122.92.89:8082/ESACCI-LC-L4-LCCS-Map-300m-P1Y-2009-v2.0.7.tif.vrt.json"
     },
     "landcover2010": {
       "tileSize": 256,
       "type": "raster",
-      "url": "http://159.122.92.89:8082/ESACCI-LC-L4-LCCS-Map-300m-P1Y-2010-v2.0.7.tif.vrt.json"
+      "url": "https://159.122.92.89:8082/ESACCI-LC-L4-LCCS-Map-300m-P1Y-2010-v2.0.7.tif.vrt.json"
     },
     "landcover2011": {
       "tileSize": 256,
       "type": "raster",
-      "url": "http://159.122.92.89:8082/ESACCI-LC-L4-LCCS-Map-300m-P1Y-2011-v2.0.7.tif.vrt.json"
+      "url": "https://159.122.92.89:8082/ESACCI-LC-L4-LCCS-Map-300m-P1Y-2011-v2.0.7.tif.vrt.json"
     },
     "landcover2012": {
       "tileSize": 256,
       "type": "raster",
-      "url": "http://159.122.92.89:8082/ESACCI-LC-L4-LCCS-Map-300m-P1Y-2012-v2.0.7.tif.vrt.json"
+      "url": "https://159.122.92.89:8082/ESACCI-LC-L4-LCCS-Map-300m-P1Y-2012-v2.0.7.tif.vrt.json"
     },
     "landcover2013": {
       "tileSize": 256,
       "type": "raster",
-      "url": "http://159.122.92.89:8082/ESACCI-LC-L4-LCCS-Map-300m-P1Y-2013-v2.0.7.tif.vrt.json"
+      "url": "https://159.122.92.89:8082/ESACCI-LC-L4-LCCS-Map-300m-P1Y-2013-v2.0.7.tif.vrt.json"
     },
     "landcover2014": {
       "tileSize": 256,
       "type": "raster",
-      "url": "http://159.122.92.89:8082/ESACCI-LC-L4-LCCS-Map-300m-P1Y-2014-v2.0.7.tif.vrt.json"
+      "url": "https://159.122.92.89:8082/ESACCI-LC-L4-LCCS-Map-300m-P1Y-2014-v2.0.7.tif.vrt.json"
     },
     "landcover2015": {
       "tileSize": 256,
       "type": "raster",
-      "url": "http://159.122.92.89:8082/ESACCI-LC-L4-LCCS-Map-300m-P1Y-2015-v2.0.7.tif.vrt.json"
+      "url": "https://159.122.92.89:8082/ESACCI-LC-L4-LCCS-Map-300m-P1Y-2015-v2.0.7.tif.vrt.json"
     }
   },
   "version": 8,
