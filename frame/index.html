@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8' />
+    <title>OpenMapTiles OSM Bright style</title>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.44.1/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.44.1/mapbox-gl.css' rel='stylesheet' />
+    <link rel="icon" type="image/png" href="/eovation/frame/favicon.png" />
+    <link rel="shortcut icon" href="/eovation/frame/favicon.ico" type="image/x-icon">
+    <style>
+        body { margin:0; padding:0; font-family: sans-serif; }
+        * { box-sizing: border-box; }
+        #header { position:absolute; top:0; bottom:0; height: 10vh; width:100%; padding: 1vh;
+            font-size: 4vh;
+            display:flex;
+            align-items:center;
+        }
+        #header img { height: 8vh; width:auto;}
+        #header span { margin-left: 4vh; }
+        #map { position:absolute; top:10vh; bottom:0; width:100%; }
+        #buttons { position:absolute; top:11vh; right:0; height: 10vh; }
+        #buttons button {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 2vh;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 3vh;
+            margin: 1vh;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id='header'>
+        <img src="octogeo.png" />
+        <span>OctoGEO.com</span>
+    </div>
+    <div id='map'></div>
+    <div id='buttons'>
+        <button type="button">Noise</button>
+        <button type="button">Light</button>
+        <button type="button">Green</button>
+    </div>
+    <script>
+        var map = new mapboxgl.Map({
+            container: 'map',
+            style: '/eovation/noise/style.satellite.json',
+            center: [8.5456, 47.3739],
+            zoom: 11,
+            hash: true
+        });
+    </script>
+</body>
+</html>
