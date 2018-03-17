@@ -74,8 +74,6 @@
 
             var links = document.getElementById('links');
             [].forEach.call(links.children, function(div) {
-                console.log(div);
-                console.log(div, div.classList.contains(id));
                if(div.classList.contains(id)) {
                    div.classList.add('active')
                } else {
