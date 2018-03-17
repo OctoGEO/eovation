@@ -62,12 +62,45 @@
             hash: true
         });
 
+        var timeid;
         var onButtonClick = function(evt) {
+            if(timeid) {
+                console.log('clearing interval', timeid);
+                clearInterval(timeid);
+            }
             var id = evt.target.id;
             var styles = {
                 noise: '/eovation/noise/style.satellite.json',
-                green: '/eovation/landcover/style.satellite.json',
+                green: '/eovation/landcover/style.all-satellite.json',
                 light: '/eovation/light/style.satellite.json'
+            }
+            var animations = {
+                green: [ { id: 'landcover1992', title: 'ESA Landcover 1992' },
+  { id: 'landcover1993', title: 'ESA Landcover 1993' },
+  { id: 'landcover1994', title: 'ESA Landcover 1994' },
+  { id: 'landcover1995', title: 'ESA Landcover 1995' },
+  { id: 'landcover1996', title: 'ESA Landcover 1996' },
+  { id: 'landcover1997', title: 'ESA Landcover 1997' },
+  { id: 'landcover1998', title: 'ESA Landcover 1998' },
+  { id: 'landcover1999', title: 'ESA Landcover 1999' },
+  { id: 'landcover2000', title: 'ESA Landcover 2000' },
+  { id: 'landcover2001', title: 'ESA Landcover 2001' },
+  { id: 'landcover2002', title: 'ESA Landcover 2002' },
+  { id: 'landcover2003', title: 'ESA Landcover 2003' },
+  { id: 'landcover2004', title: 'ESA Landcover 2004' },
+  { id: 'landcover2005', title: 'ESA Landcover 2005' },
+  { id: 'landcover2006', title: 'ESA Landcover 2006' },
+  { id: 'landcover2007', title: 'ESA Landcover 2007' },
+  { id: 'landcover2008', title: 'ESA Landcover 2008' },
+  { id: 'landcover2009', title: 'ESA Landcover 2009' },
+  { id: 'landcover2010', title: 'ESA Landcover 2010' },
+  { id: 'landcover2011', title: 'ESA Landcover 2011' },
+  { id: 'landcover2012', title: 'ESA Landcover 2012' },
+  { id: 'landcover2013', title: 'ESA Landcover 2013' },
+  { id: 'landcover2014', title: 'ESA Landcover 2014' },
+  { id: 'landcover2015', title: 'ESA Landcover 2015' } ]
+
+,
             }
             var style = styles[id];
             map.setStyle(style, {diff: false});
@@ -100,6 +133,19 @@
                         zoom: 9
                     });
                 }
+            }
+
+            if(id in animations) {
+                var layerIdx = 0;
+                layers = animations[id];
+                console.log(layers);
+                timeid = setInterval(function() {
+                    layerIdx = (layerIdx+1)%layers.length;
+                    map.setPaintProperty(layers[layerIdx].id, 'raster-opacity', 0.8);
+                    var prevIdx = (layerIdx+layers.length-2)%layers.length;
+                    map.setPaintProperty(layers[prevIdx].id, 'raster-opacity', 0.001);
+                },
+                1000);
             }
 
 
