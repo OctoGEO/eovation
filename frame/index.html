@@ -20,7 +20,14 @@
         #header span { margin-left: 4vh; }
         #map { position:absolute; top:10vh; bottom:0; width:100%; }
         #buttons { position:absolute; top:11vh; right:0; height: 10vh; }
-        #buttons button {
+        #buttons button,
+        #links a {
+            appearance: button; /* CSS3 */
+            -webkit-appearance: button; /* Safari and Chrome */
+            -moz-appearance: button; /* Firefox */
+            -ms-appearance: button; /* Internet Explorer */
+            -o-appearance: button; /* Opera */
+            cursor: default;
             background-color: #4CAF50;
             border: none;
             color: white;
@@ -32,9 +39,10 @@
             margin: 1vh;
             cursor: pointer;
         }
-        #links { position:absolute; bottom:5vh; right:0; background-color: rgba(255,255,255,0.7); }
+        #links { position:absolute; bottom:5vh; right:0; }
         #links > div { display: none; }
-        #links > div.active { display: block; }
+        #links > div.active { display: block }
+        #links > div.active span { padding: 2vh; background-color: rgba(255,255,255,0.8); font-size: 3vh;}
     </style>
 </head>
 <body>
@@ -50,7 +58,11 @@
     </div>
     <div id='links'>
         <div class="noise active">
+            <span>OSM Noise Pollution 2016</span>
             <a target="_blank" href="https://octogeo.com/eovation/noise/index.html#ll=49.17711,16.60458;alt=11569;h=0.005;t=3.451">3D</a>
+        </div>
+        <div class="green">
+            <span id="green-anim-title">ESA Landcover 1992</span>
         </div>
     </div>
     <script>
@@ -139,11 +151,16 @@
                 var layerIdx = 0;
                 layers = animations[id];
                 console.log(layers);
+                var titleEl = document.getElementById(id+'-anim-title');
                 timeid = setInterval(function() {
                     layerIdx = (layerIdx+1)%layers.length;
+                    titleEl.innerHTML = layers[layerIdx].title;
                     map.setPaintProperty(layers[layerIdx].id, 'raster-opacity', 0.8);
                     var prevIdx = (layerIdx+layers.length-2)%layers.length;
                     map.setPaintProperty(layers[prevIdx].id, 'raster-opacity', 0.001);
+                    if(!layerIdx) {
+                        map.setPaintProperty(layers[layers.length-1].id, 'raster-opacity', 0.001);
+                    }
                 },
                 1000);
             }
