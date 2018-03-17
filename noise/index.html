@@ -21,7 +21,7 @@
 
         var noise = WE.tileLayer('https://maps.tilehosting.com/c/klokantech/styles/noise-pollution-only/{z}/{x}/{y}@2x.png?key=2rAee65H2Kxb4K8dcZTl', {
           attribution: 'Data by OpenStreetMap.',
-          opacity: 0.6
+          opacity: 0.8
         });
         noise.addTo(earth);
 
@@ -32,6 +32,55 @@
 
         document.getElementById('opacity').addEventListener('change', onChange);
         document.getElementById('opacity').addEventListener('input', onChange);
+
+        lastCreatedHash = '';
+
+        setInterval(function(){
+          var pos = earth.getPosition();
+          var newhash = '#ll=' + pos[0].toFixed(5) + ',' + pos[1].toFixed(5) +
+              ';alt=' + earth.getAltitude().toFixed(0);
+          var head = earth.getHeading(), tilt = earth.getTilt();
+          if (Math.abs(head) > 0.001) newhash += ';h=' + head.toFixed(3);
+          if (Math.abs(tilt) > 0.001) newhash += ';t=' + tilt.toFixed(3);
+          if (window.location.hash.toString() !== newhash) {
+            lastCreatedHash = newhash;
+            window.location.hash = newhash;
+          }
+        }, 1000);
+
+        var parseHash = function() {
+            if (window.location.hash == lastCreatedHash) return;
+            var params = window.location.hash.substr(1).split(';');
+            var getValue = function (name) {
+                name += '=';
+                var pair = params.find(function (el, i, a) {
+                    return el.indexOf(name) === 0;
+                });
+
+                if (typeof pair !== 'undefined' && pair !== null) {
+                    var value = pair.substr(name.length);
+                    if (value.length > 0)
+                        return value;
+                }
+                return undefined;
+            };
+
+            var ll = getValue('ll'), altitude = getValue('alt');
+            var heading = getValue('h'), tilt = getValue('t');
+            if (typeof ll !== 'undefined' && ll !== null) {
+                var llsplit = ll.split(',');
+                if (llsplit.length > 1 && !isNaN(llsplit[0]) && !isNaN(llsplit[1])) {
+                    if (!altitude || isNaN(altitude)) altitude = 17000000;
+                    if (!tilt || isNaN(tilt)) tilt = 0;
+                    if (!heading || isNaN(heading)) heading = 0;
+                    earth.setPosition(parseFloat(llsplit[0]), parseFloat(llsplit[1]),
+                        undefined, parseFloat(altitude),
+                        parseFloat(heading), parseFloat(tilt));
+                }
+            }
+        };
+
+        parseHash();
 
       }
     </script>
@@ -150,7 +199,7 @@
     <div id="earth_div"></div>
     <div id="controls">
       Noise opacity<br />
-      <input type="range" id="opacity" min="0" max="1" step="0.01" value="0.6" />
+      <input type="range" id="opacity" min="0" max="1" step="0.01" value="0.8" />
     </div>
   </body>
 </html>
