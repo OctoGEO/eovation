@@ -41,9 +41,9 @@
     </div>
     <div id='map'></div>
     <div id='buttons'>
-        <button type="button">Noise</button>
-        <button type="button">Light</button>
-        <button type="button">Green</button>
+        <button type="button" id="noise">Noise</button>
+        <button type="button" id="light">Light</button>
+        <button type="button" id="green">Green</button>
     </div>
     <script>
         var map = new mapboxgl.Map({
@@ -53,6 +53,24 @@
             zoom: 11,
             hash: true
         });
+
+        var onButtonClick = function(evt) {
+            var id = evt.target.id;
+            var styles = {
+                noise: '/eovation/noise/style.satellite.json',
+                green: '/eovation/landcover/style.satellite.json',
+                light: '/eovation/noise/style.satellite.json'
+            }
+            var style = styles[id];
+            map.setStyle(style, {diff: false});
+
+
+        }
+
+        document.getElementById('noise').addEventListener('click', onButtonClick);
+        document.getElementById('light').addEventListener('click', onButtonClick);
+        document.getElementById('green').addEventListener('click', onButtonClick);
+
     </script>
 </body>
 </html>
