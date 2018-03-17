@@ -64,6 +64,9 @@
         <div class="green">
             <span id="green-anim-title">ESA Landcover 1992</span>
         </div>
+        <div class="light">
+            <span id="light-anim-title">NASA Earth at Night 2012</span>
+        </div>
     </div>
     <script>
         var map = new mapboxgl.Map({
@@ -84,7 +87,7 @@
             var styles = {
                 noise: '/eovation/noise/style.satellite.json',
                 green: '/eovation/landcover/style.all-satellite.json',
-                light: '/eovation/light/style.satellite.json'
+                light: '/eovation/light/style.all-satellite.json'
             }
             var animations = {
                 green: [ { id: 'landcover1992', title: 'ESA Landcover 1992' },
@@ -110,7 +113,9 @@
   { id: 'landcover2012', title: 'ESA Landcover 2012' },
   { id: 'landcover2013', title: 'ESA Landcover 2013' },
   { id: 'landcover2014', title: 'ESA Landcover 2014' },
-  { id: 'landcover2015', title: 'ESA Landcover 2015' } ]
+  { id: 'landcover2015', title: 'ESA Landcover 2015' } ],
+                light: [ { id: 'light2012', title: 'NASA Earth at Night 2012' },
+  { id: 'light2016', title: 'NASA Earth at Night 2016' } ]
 
 ,
             }
@@ -150,19 +155,29 @@
             if(id in animations) {
                 var layerIdx = 0;
                 layers = animations[id];
-                console.log(layers);
                 var titleEl = document.getElementById(id+'-anim-title');
-                timeid = setInterval(function() {
-                    layerIdx = (layerIdx+1)%layers.length;
-                    titleEl.innerHTML = layers[layerIdx].title;
-                    map.setPaintProperty(layers[layerIdx].id, 'raster-opacity', 0.8);
-                    var prevIdx = (layerIdx+layers.length-2)%layers.length;
-                    map.setPaintProperty(layers[prevIdx].id, 'raster-opacity', 0.001);
-                    if(!layerIdx) {
-                        map.setPaintProperty(layers[layers.length-1].id, 'raster-opacity', 0.001);
-                    }
-                },
-                1000);
+                if(id==="green") {
+                    timeid = setInterval(function() {
+                        layerIdx = (layerIdx + 1) % layers.length;
+                        titleEl.innerHTML = layers[layerIdx].title;
+                        map.setPaintProperty(layers[layerIdx].id, 'raster-opacity', 0.8);
+                        var prevIdx = (layerIdx + layers.length - 2) % layers.length;
+                        map.setPaintProperty(layers[prevIdx].id, 'raster-opacity', 0.001);
+                        if (!layerIdx) {
+                            map.setPaintProperty(layers[layers.length - 1].id, 'raster-opacity', 0.001);
+                        }
+                    },
+                    1000);
+                } else if (id === "light") {
+                    timeid = setInterval(function() {
+                        map.setPaintProperty(layers[layerIdx].id, 'raster-opacity', 0.001);
+                        layerIdx = (layerIdx + 1) % layers.length;
+                        titleEl.innerHTML = layers[layerIdx].title;
+                        map.setPaintProperty(layers[layerIdx].id, 'raster-opacity', 0.8);
+                    },
+                    3000);
+
+                }
             }
 
 
