@@ -52,12 +52,17 @@
     </div>
     <div id='map'></div>
     <div id='buttons'>
+        <button type="button" id="satellite">Satellite</button>
         <button type="button" id="noise">Noise</button>
         <button type="button" id="light">Light</button>
         <button type="button" id="green">Green</button>
     </div>
     <div id='links'>
-        <div class="noise active">
+        <div class="satellite active">
+            <span>ESA Copernicus Sentinel-2 + IPR Praha</span>
+            <a target="_blank" href="https://octogeo.com/eovation/satellite/index.html#ll=50.08614,14.41361;alt=367;h=0.422;t=3.076">3D</a>
+        </div>
+        <div class="noise">
             <span>OSM Noise Pollution 2016</span>
             <a target="_blank" href="https://octogeo.com/eovation/noise/index.html#ll=49.17711,16.60458;alt=11569;h=0.005;t=3.451">3D</a>
         </div>
@@ -73,8 +78,8 @@
         var map = new mapboxgl.Map({
             container: 'map',
             style: '/eovation/noise/style.satellite.json',
-            center: [8.5456, 47.3739],
-            zoom: 11,
+            center: [14.412229, 50.086874],
+            zoom: 15,
             hash: true
         });
 
@@ -86,6 +91,7 @@
             }
             var id = evt.target.id;
             var styles = {
+                satellite: '/eovation/noise/style.satellite.json',
                 noise: '/eovation/noise/style.satellite.json',
                 green: '/eovation/landcover/style.all-satellite.json',
                 light: '/eovation/light/style.all-satellite.json'
@@ -184,6 +190,7 @@
 
         }
 
+        document.getElementById('satellite').addEventListener('click', onButtonClick);
         document.getElementById('noise').addEventListener('click', onButtonClick);
         document.getElementById('light').addEventListener('click', onButtonClick);
         document.getElementById('green').addEventListener('click', onButtonClick);
