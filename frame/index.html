@@ -32,6 +32,9 @@
             margin: 1vh;
             cursor: pointer;
         }
+        #links { position:absolute; bottom:5vh; right:0; background-color: rgba(255,255,255,0.7); }
+        #links > div { display: none; }
+        #links > div.active { display: block; }
     </style>
 </head>
 <body>
@@ -44,6 +47,11 @@
         <button type="button" id="noise">Noise</button>
         <button type="button" id="light">Light</button>
         <button type="button" id="green">Green</button>
+    </div>
+    <div id='links'>
+        <div class="noise active">
+            <a target="_blank" href="https://octogeo.com/eovation/noise/index.html#ll=49.17711,16.60458;alt=11569;h=0.005;t=3.451">3D</a>
+        </div>
     </div>
     <script>
         var map = new mapboxgl.Map({
@@ -63,6 +71,17 @@
             }
             var style = styles[id];
             map.setStyle(style, {diff: false});
+
+            var links = document.getElementById('links');
+            [].forEach.call(links.children, function(div) {
+                console.log(div);
+                console.log(div, div.classList.contains(id));
+               if(div.classList.contains(id)) {
+                   div.classList.add('active')
+               } else {
+                   div.classList.remove('active')
+               }
+            });
 
 
         }
